@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Monty App</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot">¿Olvidaste la contraseña?</string>
+    <string name="login">Entrar</string>
+    <string name="entry">Entrar sin cuenta</string>
+</resources>
