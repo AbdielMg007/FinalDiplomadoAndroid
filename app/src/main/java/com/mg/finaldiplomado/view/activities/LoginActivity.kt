@@ -1,10 +1,12 @@
 package com.mg.finaldiplomado.view.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
+import com.google.firebase.auth.FirebaseAuth
 import com.mg.finaldiplomado.R
 import com.mg.finaldiplomado.databinding.ActivityLoginBinding
 import com.mg.finaldiplomado.view.fragments.EntryFragment
@@ -31,6 +33,17 @@ class LoginActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
+    }
+    public override fun onResume() {
+        super.onResume()
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            val pass = Intent(this, MenuActivity::class.java)
+            startActivity(pass)
+            finish()
+        } else {
+            setup()
+        }
     }
 
     override fun onPause() {
