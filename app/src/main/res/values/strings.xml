@@ -4,5 +4,16 @@
     <string name="password">Contraseña</string>
     <string name="forgot">¿Olvidaste la contraseña?</string>
     <string name="login">Entrar</string>
-    <string name="entry">Entrar sin cuenta</string>
+    <string name="entry_login">¿No tienes cuenta?</string>
+    <string name="home">Inicio</string>
+    <string name="shopping">Articulos</string>
+    <string name="profile">Mi perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Ajustes</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="create">Crea tu cuenta</string>
+    <string name="send">Mandar</string>
+    <string name="put_adress">Ingresa tu correo</string>
+    <string name="continue_login">Continuar sin cuenta</string>
 </resources>
