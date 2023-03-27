@@ -7,31 +7,35 @@
     tools:context=".view.fragments.CreateAccountFragment">
 
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/emailCreateInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/cream"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/passwordCreateInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/cream"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/entryBtn"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/entryCreateBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput"
+        app:layout_constraintTop_toBottomOf="@+id/emailCreateInput"
         app:layout_constraintVertical_bias="0.398" />
 
     <TextView
@@ -41,7 +45,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="5dp"
         android:text="@string/email"
-        app:layout_constraintBottom_toTopOf="@+id/emailInput"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/emailCreateInput"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -50,28 +55,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:text="@string/password"
-        app:layout_constraintBottom_toTopOf="@+id/passwordInput"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/passwordCreateInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput"
+        app:layout_constraintTop_toBottomOf="@+id/emailCreateInput"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/entryBtn"
+        android:id="@+id/entryCreateBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/btnredondo"
-        android:text="@string/login"
+        android:text="@string/create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintTop_toBottomOf="@+id/emailCreateInput" />
 
 
     <Button
-        android:id="@+id/entry2Btn"
+        android:id="@+id/entry2CreateBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -82,11 +88,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entryBtn"
+        app:layout_constraintTop_toBottomOf="@+id/entryCreateBtn"
         app:layout_constraintVertical_bias="0.151" />
 
     <TextView
-        android:id="@+id/loginMsjTv"
+        android:id="@+id/loginMsjCreateTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create"

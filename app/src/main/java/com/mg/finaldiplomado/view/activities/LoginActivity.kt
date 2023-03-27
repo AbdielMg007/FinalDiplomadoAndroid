@@ -2,9 +2,12 @@ package com.mg.finaldiplomado.view.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.ColorUtils
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.commit
 import com.google.firebase.auth.FirebaseAuth
 import com.mg.finaldiplomado.R
@@ -28,6 +31,10 @@ class LoginActivity : AppCompatActivity() {
             setReorderingAllowed(true)
             add(R.id.fragmentLogin, EntryFragment())
         }
+        val window = window
+        val decorView: View = window.decorView
+        val wic = WindowInsetsControllerCompat(window, decorView)
+        wic.isAppearanceLightStatusBars = ColorUtils.calculateLuminance(getColor(R.color.black)) > 0.5
         val w: Window = window
         w.setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,

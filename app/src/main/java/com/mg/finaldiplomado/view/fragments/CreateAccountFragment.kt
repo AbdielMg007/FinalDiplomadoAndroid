@@ -24,19 +24,19 @@ class CreateAccountFragment : Fragment(R.layout.fragment_createaccount) {
 
     private fun setup() {
         binding.progressBarCreateAccount.isInvisible = true
-        binding.entryBtn.setOnClickListener {
+        binding.entryCreateBtn.setOnClickListener {
             binding.progressBarCreateAccount.isInvisible = false
             entryBtnAction()
         }
-        binding.entry2Btn.setOnClickListener {
+        binding.entry2CreateBtn.setOnClickListener {
             entry2BtnAction()
         }
     }
 
     private fun entryBtnAction() {
-        if(binding.emailInput.text.isNotEmpty() && binding.passwordInput.text.isNotEmpty()){
+        if(binding.emailCreateInput.text.isNotEmpty() && binding.passwordCreateInput.text.isNotEmpty()){
             FirebaseAuth.getInstance()
-                .createUserWithEmailAndPassword(binding.emailInput.text.toString(), binding.passwordInput.text.toString()).addOnCompleteListener{
+                .createUserWithEmailAndPassword(binding.emailCreateInput.text.toString(), binding.passwordCreateInput.text.toString()).addOnCompleteListener{
                     if (it.isSuccessful){
                         val nextScreen = Intent(context, MenuActivity::class.java)
                         binding.progressBarCreateAccount.isInvisible = true

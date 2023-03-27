@@ -15,6 +15,7 @@
         android:backgroundTint="@color/cream"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +30,7 @@
         android:backgroundTint="@color/cream"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/entryBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,6 +45,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="5dp"
         android:text="@string/email"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/emailInput"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:text="@string/password"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/passwordInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput"
@@ -63,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:text="@string/forgot"
+        android:textColor="@color/gray"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
@@ -87,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:text="@string/entry_login"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
