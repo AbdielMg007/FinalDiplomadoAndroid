@@ -16,4 +16,5 @@
     <string name="send">Mandar</string>
     <string name="put_adress">Ingresa tu correo</string>
     <string name="continue_login">Continuar sin cuenta</string>
+    <string name="info">Informacion</string>
 </resources>

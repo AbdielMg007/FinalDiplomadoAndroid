@@ -11,6 +11,8 @@ import com.google.firebase.ktx.Firebase
 import com.mg.finaldiplomado.R
 import com.mg.finaldiplomado.databinding.ActivitySettingsBinding
 import com.mg.finaldiplomado.view.fragments.HomeFragment
+import com.mg.finaldiplomado.view.fragments.InfoFragment
+import com.mg.finaldiplomado.view.fragments.ProfileFragment
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -27,6 +29,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        replaceFragment(ProfileFragment())
         setup()
     }
 
@@ -39,8 +42,13 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         binding.profile.setOnClickListener{
+            replaceFragment(ProfileFragment())
             isFabOpen = false
+        }
 
+        binding.info.setOnClickListener{
+            replaceFragment(InfoFragment())
+            isFabOpen = false
         }
 
         binding.logOut.setOnClickListener {
@@ -54,22 +62,22 @@ class SettingsActivity : AppCompatActivity() {
         isFabOpen = true
         binding.apps.setImageResource(R.drawable.vector_close)
         binding.profile.animate().translationY(-540F)
-        binding.logOut.animate().translationY(-360F)
-        binding.info.animate().translationY(-180F)
+        binding.info.animate().translationY(-360F)
+        binding.logOut.animate().translationY(-180F)
     }
 
     fun closeFab(){
         isFabOpen = false
         binding.apps.setImageResource(R.drawable.vector_apps)
         binding.profile.animate().translationY(0F)
-        binding.logOut.animate().translationY(0F)
         binding.info.animate().translationY(0F)
+        binding.logOut.animate().translationY(0F)
     }
 
     private fun replaceFragment(fragment: Fragment){
         val fragmentMager = supportFragmentManager
         val fragmentTrasaction = fragmentMager.beginTransaction()
-        fragmentTrasaction.replace(R.id.fragmentNav, fragment)
+        fragmentTrasaction.replace(R.id.fragmentSet, fragment)
         fragmentTrasaction.commit()
     }
 }
