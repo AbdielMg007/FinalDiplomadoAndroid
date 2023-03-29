@@ -1,4 +1,4 @@
-package com.mg.finaldiplomado.helpers.enties
+package com.mg.finaldiplomado.model.enties
 
 data class Publication(
     var photo: String,

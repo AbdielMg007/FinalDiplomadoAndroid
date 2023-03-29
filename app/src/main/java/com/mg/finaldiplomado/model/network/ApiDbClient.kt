@@ -1,4 +1,4 @@
-package com.mg.finaldiplomado.helpers.network
+package com.mg.finaldiplomado.model.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

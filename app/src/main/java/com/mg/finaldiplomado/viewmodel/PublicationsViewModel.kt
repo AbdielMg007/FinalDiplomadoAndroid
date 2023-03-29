@@ -2,8 +2,8 @@ package com.mg.finaldiplomado.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.mg.finaldiplomado.helpers.enties.Publication
-import com.mg.finaldiplomado.helpers.network.ApiDbClient
+import com.mg.finaldiplomado.model.enties.Publication
+import com.mg.finaldiplomado.model.network.ApiDbClient
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -13,14 +13,14 @@ class PublicationsViewModel : ViewModel() {
     var list = MutableLiveData<ArrayList<Publication>>()
 
     init {
-        getAnimalsList()
+        getPublicationsList()
     }
 
-    fun getAnimalsList() {
+    private fun getPublicationsList() {
         CoroutineScope(Dispatchers.IO).launch{
             val call = ApiDbClient.service.getPublications("publications")
             val publication = call.execute().body()
-            publicationList = ((publication?.publication ?: emptyList<Publication>()) as ArrayList<Publication>)
+            publicationList = ((publication?.publication ?: emptyList()) as ArrayList<Publication>)
             list.postValue(publicationList)
 
         }

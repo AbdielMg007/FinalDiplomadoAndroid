@@ -7,7 +7,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mg.finaldiplomado.R
 import com.mg.finaldiplomado.databinding.FragmentHomeBinding
-import com.mg.finaldiplomado.helpers.enties.Publication
 import com.mg.finaldiplomado.view.adapters.AdapterPublication
 import com.mg.finaldiplomado.viewmodel.PublicationsViewModel
 
