@@ -38,6 +38,9 @@ class ShopFragment : Fragment(R.layout.fragment_shop), ProductClick {
     }
 
     override fun productsClickListener(Product: Product) {
-        Toast.makeText(context,"Si sirve",Toast.LENGTH_SHORT).show()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentNav, ProductFragment.newInstance(Product))
+            .addToBackStack("prodcutFragment")
+            .commit()
     }
 }

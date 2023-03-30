@@ -43,12 +43,12 @@ class SettingsActivity : AppCompatActivity() {
 
         binding.profile.setOnClickListener{
             replaceFragment(ProfileFragment())
-            isFabOpen = false
+            closeFab()
         }
 
         binding.info.setOnClickListener{
             replaceFragment(InfoFragment())
-            isFabOpen = false
+            closeFab()
         }
 
         binding.logOut.setOnClickListener {
